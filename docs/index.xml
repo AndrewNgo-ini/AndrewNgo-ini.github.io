@@ -22,7 +22,10 @@
       <pubDate>Mon, 14 Nov 2022 14:51:28 +0700</pubDate>
       
       <guid>https://AndrewNgo-ini.github.io/posts/first/</guid>
-      <description></description>
+      <description>architecture -&amp;gt; durability, utility, beauty
+clean -&amp;gt; for each component, if you know where it is, what it is, why it is in the system
+picture of clean architecture
+RULE: only the layer that can see itself</description>
     </item>
     
   </channel>
