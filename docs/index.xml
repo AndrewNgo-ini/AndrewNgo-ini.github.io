@@ -65,22 +65,13 @@ RNN là một biến thể của Neural Networks được sử dụng thường 
     
     <item>
       <title>Bias variance</title>
-      <link>https://AndrewNgo-ini.github.io/posts/bias_variance/</link>
+      <link>https://AndrewNgo-ini.github.io/posts/bias_variance/bias_variance/</link>
       <pubDate>Mon, 14 Nov 2022 14:51:28 +0700</pubDate>
       
-      <guid>https://AndrewNgo-ini.github.io/posts/bias_variance/</guid>
+      <guid>https://AndrewNgo-ini.github.io/posts/bias_variance/bias_variance/</guid>
       <description>Bias ? Variance ?
 By looking at training error and valid error, we can diagnose what is the problem with our model
 At first column, Train-error perform well, but Dev set not generalize well =&amp;gt; High Variance (Overfit) At second column, train-error did not well nor Dev set =&amp;gt; High bias (Underfit) At third column, High bias because not doing well on training set and High variance because even not doing well on trainset but dev set is even worse Final column, low bias low variance =&amp;gt; we want this Ilustration of all those things </description>
-    </item>
-    
-    <item>
-      <title>Explain math</title>
-      <link>https://AndrewNgo-ini.github.io/posts/expain_math/</link>
-      <pubDate>Mon, 14 Nov 2022 14:51:28 +0700</pubDate>
-      
-      <guid>https://AndrewNgo-ini.github.io/posts/expain_math/</guid>
-      <description>I have been started late, back to highschool all I did was just crunching all tons of numbers without understand it despite the fact that i&amp;rsquo;m pretty good at doing it. But since then, and from now on. Theres something different in my thought. I dont want to do thing that i don&amp;rsquo;t understand. I always crave for at least an intuition about hows it work. When started doing Machine Learning problems.</description>
     </item>
     
     <item>

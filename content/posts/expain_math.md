@@ -1,7 +1,7 @@
 ---
 title: "Explain math"
 date: 2022-11-14T14:51:28+07:00
-draft: false
+draft: true
 ---
 I have been started late, back to highschool all I did was just crunching all tons of numbers without understand it despite the fact that i'm pretty good at doing it. But since then, and from now on. Theres something different in my thought. I dont want to do thing that i don't understand. I always crave for at least an intuition about hows it work. When started doing Machine Learning problems. Math is quite an essential skills that everybody has to learn, to some extent I supposed. The three components they said and I thought include Linear algebrea, Calculus and Probability Statiscial. If I had to explain the most practical knowledge in math. below are some of the concept I found it pretty needed using it or not 
 I. Linear Algebrea 

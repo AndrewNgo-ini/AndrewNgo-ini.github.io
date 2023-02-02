@@ -8,7 +8,7 @@ Variance ?
 
 By looking at training error and valid error, we can diagnose what is the problem with our model
 
-<img href= "Bias-Variance/Bias-Variance-classify-example.png">
+![alt text](/Users/ngohieu/blog/content/posts/bias_variance/Bias-Variance-classify-example.png)
 
 + At first column, Train-error perform well, but Dev set not generalize well => High Variance (Overfit)
 + At second column, train-error did not well nor Dev set => High bias (Underfit)
@@ -16,5 +16,6 @@ By looking at training error and valid error, we can diagnose what is the proble
 + Final column, low bias low variance => we want this
 
 Ilustration of all those things
-<img href = "Bias-Variance/ilu1.png">
-<img href = "Bias-Variance/ilu2.png">
+![alt text](images/ilu1.jpg)
+![alt text](./images/ilu2.png)
+![alt text](/assets/images/download.jpeg)
