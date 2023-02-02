@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>RNN | My New Hugo Site</title>
+<meta name="keywords" content="">
+<meta name="description" content="I. RNN là gì? Đầu tiên mình xin giới thiệu 1 số ứng dụng của Sequence Model (RNN)
+RNN là một biến thể của Neural Networks được sử dụng thường xuyên ở trong NLP (Natural language processing)
+Ở một mạng Neural thông thường, các input được xử lý thông qua các layers và chúng ta có output, trong trường hợp này những input liên tiếp nhau được xem như không phụ thuộc vào nhau (independent)">
+<meta name="author" content="">
+<link rel="canonical" href="https://AndrewNgo-ini.github.io/posts/rnn/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AndrewNgo-ini.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AndrewNgo-ini.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AndrewNgo-ini.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AndrewNgo-ini.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AndrewNgo-ini.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="RNN" />
+<meta property="og:description" content="I. RNN là gì? Đầu tiên mình xin giới thiệu 1 số ứng dụng của Sequence Model (RNN)
+RNN là một biến thể của Neural Networks được sử dụng thường xuyên ở trong NLP (Natural language processing)
+Ở một mạng Neural thông thường, các input được xử lý thông qua các layers và chúng ta có output, trong trường hợp này những input liên tiếp nhau được xem như không phụ thuộc vào nhau (independent)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AndrewNgo-ini.github.io/posts/rnn/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-14T15:15:16+07:00" />
+<meta property="article:modified_time" content="2022-11-14T15:15:16+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="RNN"/>
+<meta name="twitter:description" content="I. RNN là gì? Đầu tiên mình xin giới thiệu 1 số ứng dụng của Sequence Model (RNN)
+RNN là một biến thể của Neural Networks được sử dụng thường xuyên ở trong NLP (Natural language processing)
+Ở một mạng Neural thông thường, các input được xử lý thông qua các layers và chúng ta có output, trong trường hợp này những input liên tiếp nhau được xem như không phụ thuộc vào nhau (independent)"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://AndrewNgo-ini.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "RNN",
+      "item": "https://AndrewNgo-ini.github.io/posts/rnn/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "RNN",
+  "name": "RNN",
+  "description": "I. RNN là gì? Đầu tiên mình xin giới thiệu 1 số ứng dụng của Sequence Model (RNN)\nRNN là một biến thể của Neural Networks được sử dụng thường xuyên ở trong NLP (Natural language processing)\nỞ một mạng Neural thông thường, các input được xử lý thông qua các layers và chúng ta có output, trong trường hợp này những input liên tiếp nhau được xem như không phụ thuộc vào nhau (independent)",
+  "keywords": [
+    
+  ],
+  "articleBody": "I. RNN là gì? Đầu tiên mình xin giới thiệu 1 số ứng dụng của Sequence Model (RNN)\nRNN là một biến thể của Neural Networks được sử dụng thường xuyên ở trong NLP (Natural language processing)\nỞ một mạng Neural thông thường, các input được xử lý thông qua các layers và chúng ta có output, trong trường hợp này những input liên tiếp nhau được xem như không phụ thuộc vào nhau (independent)\nTuy nhiên, khi gặp các bài toán thực tế, chúng ta lại mong muốn các input phụ thuộc (dependent) lẫn nhau.\nVí dụ: dự đoán chữ tiếp theo trong một chuỗi.\nNói về nghĩa đen, Recurrent (tái xuất hiện) bởi vì chúng thực hiện cái task giống hệt nhau cho mỗi element của một chuỗi mà trong đó output hiện tại phụ thuộc vào việc tính toán trước đó.\nCác bạn có thể tưởng tượng bức hình như một multilayer neural network với mỗi layer biểu diện sự quan sát ở một thời gian t\nII. Tại sao chúng ta cần RNN? Lý do thứ nhất mà mình có thể nói từ phần trên là vì các output của thời điểm t sẽ có input là từ thời điểm t-1 và đồng thời feature X. Từ đó chúng ta có thể tạm gọi là RNN có thể “lưu trữ” thông tin phía trước\nLý do thứ hai: một mạng NN bình thường sẽ có input và output cố định (fixed-size), RNN thì không\nThe parameters required for handling text will be very large in case of Standard neural networks. RNN requires much less parameters to learn (lý do mình tìm được, chắc mình sẽ implement một ngày không xa để tìm hiểu tại sao, hi :D)\nTuy nhiên RNN vẫn chưa đáp ứng được so với real-world problem, sắp tới mình sẽ viết thêm về LSTM, GRU. Các bạn đón xem nhé :D\nMột số tư liệu mình tham khảo:\nhttps://towardsdatascience.com/understanding-neural-networks-from-neuron-to-rnn-cnn-and-deep-learning-cd88e90e0a90\nhttps://www.quora.com/Why-do-we-use-an-RNN-instead-of-a-simple-neural-network\n==Fist== What?\nRNN is different type of structure of Neural Network, they designed it like that just to make use of sequence learning .\n++So what is the differnt, why not use simple RNN ? ++\nInput size and outputsize stay fixed, even u can padding it, its doesn seem to make any representation about it -\u003e handle??\nShare learning ??\n#implement note\nAT TIME STEP T, each cell\nInput X (m, nx) hiddenstate (m,na) =\u003e (m, nx) * (nx, na) =(m, na) (1)\nPrevious A (m, na) hiddenstate (m, na) =\u003e (m,na) * (na, na) = (m, na) (2)\n(1) + (2) + ba -\u003e (m, na)\nOutput y (m, ny) hiddenstate (m, na) =\u003e (m, na) * (na, ny) = (m, ny)\n#notes on foward : theo keras, way = 0, nhung phan backprop thi ko thay cap nhat way?\n###implement backprop base on https://towardsdatascience.com/back-to-basics-deriving-back-propagation-on-simple-rnn-lstm-feat-aidan-gomez-c7f286ba973d\n#notes on building RNN step by step coursera -\u003e + ko co dao ham layer cuoi theo Loss + tai sao lai dao ham bien X theo Hidden state (a)? + co dX va` da0 trong dao. ham (tuy nhien khong cap nhat?) + chi cap nhat dWax, dWaa, dba +\n",
+  "wordCount" : "525",
+  "inLanguage": "en",
+  "datePublished": "2022-11-14T15:15:16+07:00",
+  "dateModified": "2022-11-14T15:15:16+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AndrewNgo-ini.github.io/posts/rnn/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My New Hugo Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AndrewNgo-ini.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AndrewNgo-ini.github.io" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      RNN
+    </h1>
+    <div class="post-meta"><span title='2022-11-14 15:15:16 +0700 +07'>November 14, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="i-rnn-là-gì">I. RNN là gì?<a hidden class="anchor" aria-hidden="true" href="#i-rnn-là-gì">#</a></h2>
+<p>Đầu tiên mình xin giới thiệu 1 số ứng dụng của Sequence Model (RNN)</p>
+<p><img loading="lazy" src="http://www.some-emotions.studio/wp-content/uploads/2020/03/Why-sequence-models-deeplearning.ai-Coursera-Mozilla-Firefox-1024x576.jpg" alt=""  />
+</p>
+<p>RNN là một biến thể của Neural Networks được sử dụng thường xuyên ở trong NLP (Natural language processing)<br>
+Ở một mạng Neural thông thường, các input được xử lý thông qua các layers và chúng ta có output, trong trường hợp này những input liên tiếp nhau được xem như không phụ thuộc vào nhau (independent)</p>
+<p>Tuy nhiên, khi gặp các bài toán thực tế, chúng ta lại mong muốn các input phụ thuộc (dependent) lẫn nhau.<br>
+Ví dụ: dự đoán chữ tiếp theo trong một chuỗi.</p>
+<p>Nói về nghĩa đen, Recurrent (tái xuất hiện) bởi vì chúng thực hiện cái task giống hệt nhau cho mỗi element của một chuỗi mà trong đó output hiện tại phụ thuộc vào việc tính toán trước đó.</p>
+<p><img loading="lazy" src="http://www.some-emotions.studio/wp-content/uploads/2020/03/1-buMl05BvEPJ5P7sB5ImTCg.jpeg" alt=""  />
+</p>
+<p>Các bạn có thể tưởng tượng bức hình như một multilayer neural network với mỗi layer biểu diện sự quan sát ở một thời gian t</p>
+<h2 id="ii-tại-sao-chúng-ta-cần-rnn">II. Tại sao chúng ta cần RNN?<a hidden class="anchor" aria-hidden="true" href="#ii-tại-sao-chúng-ta-cần-rnn">#</a></h2>
+<p>Lý do thứ nhất mà mình có thể nói từ phần trên là vì các output của thời điểm t sẽ có input là từ thời điểm t-1 và đồng thời feature X<!-- raw HTML omitted -->. Từ đó chúng ta có thể tạm gọi là RNN có thể &ldquo;lưu trữ&rdquo; thông tin phía trước</p>
+<p>Lý do thứ hai: một mạng NN bình thường sẽ có input và output cố định (fixed-size), RNN thì không</p>
+<p>The parameters required for handling text will be very large in case of Standard neural networks. RNN requires much less parameters to learn (lý do mình tìm được, chắc mình sẽ implement một ngày không xa để tìm hiểu tại sao, hi :D)</p>
+<hr>
+<p>Tuy nhiên RNN vẫn chưa đáp ứng được so với real-world problem, sắp tới mình sẽ viết thêm về LSTM, GRU. Các bạn đón xem nhé :D</p>
+<p>Một số tư liệu mình tham khảo:<br>
+<a href="https://towardsdatascience.com/understanding-neural-networks-from-neuron-to-rnn-cnn-and-deep-learning-cd88e90e0a90">https://towardsdatascience.com/understanding-neural-networks-from-neuron-to-rnn-cnn-and-deep-learning-cd88e90e0a90</a><br>
+<a href="https://www.quora.com/Why-do-we-use-an-RNN-instead-of-a-simple-neural-network">https://www.quora.com/Why-do-we-use-an-RNN-instead-of-a-simple-neural-network</a></p>
+<p>==Fist== What?</p>
+<p>RNN is different type of structure of Neural Network, they designed it like that just to make use of sequence learning .</p>
+<p>++So what is the differnt, why not use simple RNN ? ++</p>
+<ul>
+<li>
+<p>Input size and outputsize stay fixed, even u can padding it, its doesn seem to make any representation about it
+-&gt; handle??</p>
+</li>
+<li>
+<p>Share learning ??</p>
+</li>
+</ul>
+<p>#implement note</p>
+<p>AT TIME STEP T, each cell</p>
+<p>Input X (m, nx)
+hiddenstate (m,na)
+=&gt; (m, nx) * (nx, na)  =(m, na) (1)</p>
+<p>Previous A (m, na)
+hiddenstate (m, na)
+=&gt; (m,na) *  (na, na) = (m, na) (2)</p>
+<p>(1) + (2) + ba -&gt; (m, na)</p>
+<p>Output y (m, ny)
+hiddenstate (m, na)
+=&gt; (m, na) *  (na, ny)    = (m, ny)</p>
+<p>#notes on foward : theo keras, way = 0, nhung phan backprop thi ko thay cap nhat way?</p>
+<p>###implement backprop base on <a href="https://towardsdatascience.com/back-to-basics-deriving-back-propagation-on-simple-rnn-lstm-feat-aidan-gomez-c7f286ba973d">https://towardsdatascience.com/back-to-basics-deriving-back-propagation-on-simple-rnn-lstm-feat-aidan-gomez-c7f286ba973d</a></p>
+<p>#notes on building RNN step by step coursera -&gt; + ko co dao ham layer cuoi theo Loss
++ tai sao lai dao ham bien X theo Hidden state (a)?
++ co dX va` da0 trong dao. ham (tuy nhien khong cap nhat?)
++ chi cap nhat dWax, dWaa, dba
++</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://AndrewNgo-ini.github.io">My New Hugo Site</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
