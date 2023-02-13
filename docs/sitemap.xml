@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://AndrewNgo-ini.github.io/posts/second/</loc>
-    <lastmod>2022-11-14T15:15:16+07:00</lastmod>
-  </url><url>
-    <loc>https://AndrewNgo-ini.github.io/posts/metric_regression/</loc>
+    <loc>https://AndrewNgo-ini.github.io/posts/basic_algebra/</loc>
     <lastmod>2022-11-14T15:15:16+07:00</lastmod>
   </url><url>
     <loc>https://AndrewNgo-ini.github.io/</loc>
+    <lastmod>2022-11-14T15:15:16+07:00</lastmod>
+  </url><url>
+    <loc>https://AndrewNgo-ini.github.io/posts/metric_regression/</loc>
     <lastmod>2022-11-14T15:15:16+07:00</lastmod>
   </url><url>
     <loc>https://AndrewNgo-ini.github.io/posts/neural_network/</loc>
@@ -17,16 +17,10 @@
     <loc>https://AndrewNgo-ini.github.io/posts/</loc>
     <lastmod>2022-11-14T15:15:16+07:00</lastmod>
   </url><url>
-    <loc>https://AndrewNgo-ini.github.io/posts/python_optimize/</loc>
-    <lastmod>2022-11-14T15:15:16+07:00</lastmod>
-  </url><url>
     <loc>https://AndrewNgo-ini.github.io/posts/rnn/</loc>
     <lastmod>2022-11-14T15:15:16+07:00</lastmod>
   </url><url>
-    <loc>https://AndrewNgo-ini.github.io/posts/bias_variance/bias_variance/</loc>
-    <lastmod>2022-11-14T14:51:28+07:00</lastmod>
-  </url><url>
-    <loc>https://AndrewNgo-ini.github.io/posts/first/</loc>
+    <loc>https://AndrewNgo-ini.github.io/posts/bias_variance/</loc>
     <lastmod>2022-11-14T14:51:28+07:00</lastmod>
   </url><url>
     <loc>https://AndrewNgo-ini.github.io/categories/</loc>

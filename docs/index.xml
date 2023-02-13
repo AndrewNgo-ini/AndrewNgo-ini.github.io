@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Hieu</title>
     <link>https://AndrewNgo-ini.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Hieu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 14 Nov 2022 15:15:16 +0700</lastBuildDate><atom:link href="https://AndrewNgo-ini.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Basic Linear Algebra</title>
-      <link>https://AndrewNgo-ini.github.io/posts/second/</link>
+      <link>https://AndrewNgo-ini.github.io/posts/basic_algebra/</link>
       <pubDate>Mon, 14 Nov 2022 15:15:16 +0700</pubDate>
       
-      <guid>https://AndrewNgo-ini.github.io/posts/second/</guid>
+      <guid>https://AndrewNgo-ini.github.io/posts/basic_algebra/</guid>
       <description>I. Vector What is a vector Linear combination Basis vector Span Linear independent What is a vector A vector with its coordinates can be understood as a guide on how to go from the origin (O) to its tail.
 Basis vector (vector cơ sở) In the XY coordinate system, a vector pointing to the right with a length of 1 is called i-hat or the unit vector of the X-axis. Similarly, the vector pointing upwards with a length of 1 is called j-hat or the unit vector of the Y-axis.</description>
     </item>
@@ -40,19 +40,6 @@ Hiểu rõ về thuật toán Neural Networks (Deep Learning) Tìm hiểu sơ l�
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://AndrewNgo-ini.github.io/posts/python_optimize/</link>
-      <pubDate>Mon, 14 Nov 2022 15:15:16 +0700</pubDate>
-      
-      <guid>https://AndrewNgo-ini.github.io/posts/python_optimize/</guid>
-      <description>I. Complexity things
-string.split() == O(n) : simple foward to look for an &amp;ldquo;white space&amp;rdquo; list.copy() == O(n) : simple foward and copy each element II. String things
-Don&amp;rsquo;t ever += string, cuz it copy old string and create new string with suffiencent memory -&amp;gt; Use list append instead III. Python List Knowledge
-Dynamic Array Array of pointers IV. Coding Style Optimize
-Dont use if (Variable == True) -&amp;gt; if Variable </description>
-    </item>
-    
-    <item>
       <title>RNN</title>
       <link>https://AndrewNgo-ini.github.io/posts/rnn/</link>
       <pubDate>Mon, 14 Nov 2022 15:15:16 +0700</pubDate>
@@ -64,26 +51,13 @@ RNN là một biến thể của Neural Networks được sử dụng thường 
     </item>
     
     <item>
-      <title>Bias variance</title>
-      <link>https://AndrewNgo-ini.github.io/posts/bias_variance/bias_variance/</link>
+      <title>Bias And Variance</title>
+      <link>https://AndrewNgo-ini.github.io/posts/bias_variance/</link>
       <pubDate>Mon, 14 Nov 2022 14:51:28 +0700</pubDate>
       
-      <guid>https://AndrewNgo-ini.github.io/posts/bias_variance/bias_variance/</guid>
-      <description>Bias ? Variance ?
-By looking at training error and valid error, we can diagnose what is the problem with our model
+      <guid>https://AndrewNgo-ini.github.io/posts/bias_variance/</guid>
+      <description>By looking at training error and valid error, we can diagnose what is the problem with our model
 At first column, Train-error perform well, but Dev set not generalize well =&amp;gt; High Variance (Overfit) At second column, train-error did not well nor Dev set =&amp;gt; High bias (Underfit) At third column, High bias because not doing well on training set and High variance because even not doing well on trainset but dev set is even worse Final column, low bias low variance =&amp;gt; we want this Ilustration of all those things </description>
-    </item>
-    
-    <item>
-      <title>First</title>
-      <link>https://AndrewNgo-ini.github.io/posts/first/</link>
-      <pubDate>Mon, 14 Nov 2022 14:51:28 +0700</pubDate>
-      
-      <guid>https://AndrewNgo-ini.github.io/posts/first/</guid>
-      <description>architecture -&amp;gt; durability, utility, beauty
-clean -&amp;gt; for each component, if you know where it is, what it is, why it is in the system
-picture of clean architecture
-RULE: only the layer that can see itself</description>
     </item>
     
   </channel>

@@ -1,5 +1,36 @@
 baseURL: https://AndrewNgo-ini.github.io
 languageCode: en-us
-title: My New Hugo Site
+title: Hieu
 theme: "PaperMod"
-publishDir : "docs"
+publishDir: "docs"
+
+params:
+    homeInfoParams:
+        Title: "Hi there \U0001F44B"
+        Content: Can be Info, links, about...
+        
+    ShowBreadCrumbs: true
+    ShowReadingTime: true
+    ShowShareButtons: true
+    socialIcons:
+        - name: "twitter"
+          url: "https://twitter.com/"
+        - name: stackoverflow
+          url: "https://stackoverflow.com"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/hieu-ngo-500818174/"
+
+menu:
+    main:
+        - identifier: categories
+          name: categories
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: tags
+          url: /tags/
+          weight: 20
+        - identifier: example
+          name: example.org
+          url: https://example.org
+          weight: 30
