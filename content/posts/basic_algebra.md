@@ -1,6 +1,9 @@
 ---
 title: "Basic Linear Algebra"
 date: 2022-11-14T15:15:16+07:00
+tags:
+  - "tech"
+  - "learn"
 draft: false
 cover:
     image: "https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png"

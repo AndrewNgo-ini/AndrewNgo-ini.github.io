@@ -12,6 +12,7 @@ params:
     ShowBreadCrumbs: true
     ShowReadingTime: true
     ShowShareButtons: true
+    ShowPostNavLinks: true
     socialIcons:
         - name: "twitter"
           url: "https://twitter.com/"
@@ -34,3 +35,6 @@ menu:
           name: example.org
           url: https://example.org
           weight: 30
+
+taxonomies:
+  tag: tags
