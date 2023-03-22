@@ -1,13 +1,13 @@
 baseURL: https://AndrewNgo-ini.github.io
 languageCode: en-us
-title: Hieu
+title: let him cook
 theme: "PaperMod"
 publishDir: "docs"
 
 params:
     homeInfoParams:
         Title: "Hi there \U0001F44B"
-        Content: Can be Info, links, about...
+        Content: So, I had this crazy idea the other day. I was like, "what if I turn my brain into a freaking hash-table?" Like, seriously, picture it. My brain is now this super cool, tech-savvy tool that can store all the concepts I want to remember as keys, and the blog posts I wrote as the corresponding values. How awesome is that?! Now, whenever I need to revisit something I learned, I can just access my brain-hash and voila! It's like having a personal search engine in my head. So, if you're curious to see how it all works, check out my blog and let me know what you think! - written by ChatGPT
         
     ShowBreadCrumbs: true
     ShowReadingTime: true
@@ -16,25 +16,23 @@ params:
     socialIcons:
         - name: "twitter"
           url: "https://twitter.com/"
-        - name: stackoverflow
-          url: "https://stackoverflow.com"
         - name: linkedin
           url: "https://www.linkedin.com/in/hieu-ngo-500818174/"
 
 menu:
     main:
-        - identifier: categories
-          name: categories
-          url: /categories/
-          weight: 10
+        # - identifier: categories
+        #   name: categories
+        #   url: /categories/
+        #   weight: 10
         - identifier: tags
-          name: tags
+          name: Tags
           url: /tags/
           weight: 20
-        - identifier: example
-          name: example.org
-          url: https://example.org
-          weight: 30
+        # - identifier: example
+        #   name: example.org
+        #   url: https://example.org
+        #   weight: 30
 
 taxonomies:
   tag: tags

@@ -1,7 +1,17 @@
 ---
-title: "RNN"
+title: "What is Recurrent Neural Network?"
 date: 2022-11-14T15:15:16+07:00
+tags:
+  - "tech"
+  - "learn"
 draft: false
+cover:
+    #image: "https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png"
+    # can also paste direct link from external site
+    # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
+    alt: "<alt text>"
+    caption: "<text>"
+    relative: false # To use relative path for cover image, used in hugo Page-bundles
 ---
 I. RNN là gì?
 -------------
@@ -18,7 +28,7 @@ Ví dụ: dự đoán chữ tiếp theo trong một chuỗi.
 
 Nói về nghĩa đen, Recurrent (tái xuất hiện) bởi vì chúng thực hiện cái task giống hệt nhau cho mỗi element của một chuỗi mà trong đó output hiện tại phụ thuộc vào việc tính toán trước đó.
 
-![](http://www.some-emotions.studio/wp-content/uploads/2020/03/1-buMl05BvEPJ5P7sB5ImTCg.jpeg)
+![](/rnn/RNN-computationgraph.png)
 
 Các bạn có thể tưởng tượng bức hình như một multilayer neural network với mỗi layer biểu diện sự quan sát ở một thời gian t
 

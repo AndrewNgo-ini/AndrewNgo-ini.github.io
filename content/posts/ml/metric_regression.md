@@ -1,8 +1,19 @@
 ---
-title: "Metric regression"
-date: 2022-11-14T15:15:16+07:00
+title: "Useful metrics for Regression problems"
+date: 2022-11-15T15:15:16+07:00
+tags:
+  - "tech"
+  - "learn"
 draft: false
+cover:
+    #image: "https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png"
+    # can also paste direct link from external site
+    # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
+    alt: "<alt text>"
+    caption: "<text>"
+    relative: false # To use relative path for cover image, used in hugo Page-bundles
 ---
+
 # Metrics trong Machine Learning - Regression (P1)
 
 Trong phần này ta sẽ tìm hiểu về các metrics sau:

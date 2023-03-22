@@ -1,7 +1,17 @@
 ---
-title: "Neural Network"
-date: 2022-11-14T15:15:16+07:00
+title: "What is Neural Network?"
+date: 2020-12-14T15:15:16+07:00
+tags:
+  - "tech"
+  - "learn"
 draft: false
+cover:
+    #image: "https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png"
+    # can also paste direct link from external site
+    # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
+    alt: "<alt text>"
+    caption: "<text>"
+    relative: false # To use relative path for cover image, used in hugo Page-bundles
 ---
 Xin chào mừng các bạn tới với serie Deep Learning đầu tiên của mình, mục tiêu của serie này là:
 
