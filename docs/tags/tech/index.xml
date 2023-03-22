@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>let him cook</title>
-    <link>https://AndrewNgo-ini.github.io/</link>
-    <description>Recent content on let him cook</description>
+    <title>tech on let him cook</title>
+    <link>https://AndrewNgo-ini.github.io/tags/tech/</link>
+    <description>Recent content in tech on let him cook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Mar 2023 15:15:16 +0700</lastBuildDate><atom:link href="https://AndrewNgo-ini.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Mar 2023 15:15:16 +0700</lastBuildDate><atom:link href="https://AndrewNgo-ini.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is SimCSE?</title>
       <link>https://AndrewNgo-ini.github.io/posts/nlp/simcse/</link>
@@ -53,19 +53,6 @@ At first column, Train-error perform well, but Dev set not generalize well =&amp
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://AndrewNgo-ini.github.io/posts/python/python_optimize/</link>
-      <pubDate>Mon, 14 Nov 2022 15:15:16 +0700</pubDate>
-      
-      <guid>https://AndrewNgo-ini.github.io/posts/python/python_optimize/</guid>
-      <description>I. Complexity things
-string.split() == O(n) : simple foward to look for an &amp;ldquo;white space&amp;rdquo; list.copy() == O(n) : simple foward and copy each element II. String things
-Don&amp;rsquo;t ever += string, cuz it copy old string and create new string with suffiencent memory -&amp;gt; Use list append instead III. Python List Knowledge
-Dynamic Array Array of pointers IV. Coding Style Optimize
-Dont use if (Variable == True) -&amp;gt; if Variable </description>
-    </item>
-    
-    <item>
       <title>What is Recurrent Neural Network?</title>
       <link>https://AndrewNgo-ini.github.io/posts/nlp/rnn/</link>
       <pubDate>Mon, 14 Nov 2022 15:15:16 +0700</pubDate>
@@ -74,27 +61,6 @@ Dont use if (Variable == True) -&amp;gt; if Variable </description>
       <description>I. RNN là gì? Đầu tiên mình xin giới thiệu 1 số ứng dụng của Sequence Model (RNN)
 RNN là một biến thể của Neural Networks được sử dụng thường xuyên ở trong NLP (Natural language processing)
 Ở một mạng Neural thông thường, các input được xử lý thông qua các layers và chúng ta có output, trong trường hợp này những input liên tiếp nhau được xem như không phụ thuộc vào nhau (independent)</description>
-    </item>
-    
-    <item>
-      <title>Explain math</title>
-      <link>https://AndrewNgo-ini.github.io/posts/math/expain_math/</link>
-      <pubDate>Mon, 14 Nov 2022 14:51:28 +0700</pubDate>
-      
-      <guid>https://AndrewNgo-ini.github.io/posts/math/expain_math/</guid>
-      <description>I have been started late, back to highschool all I did was just crunching all tons of numbers without understand it despite the fact that i&amp;rsquo;m pretty good at doing it. But since then, and from now on. Theres something different in my thought. I dont want to do thing that i don&amp;rsquo;t understand. I always crave for at least an intuition about hows it work. When started doing Machine Learning problems.</description>
-    </item>
-    
-    <item>
-      <title>Clean architecture</title>
-      <link>https://AndrewNgo-ini.github.io/posts/architecture_design/clean_architecture/</link>
-      <pubDate>Sun, 13 Nov 2022 14:51:28 +0700</pubDate>
-      
-      <guid>https://AndrewNgo-ini.github.io/posts/architecture_design/clean_architecture/</guid>
-      <description>architecture -&amp;gt; durability, utility, beauty
-clean -&amp;gt; for each component, if you know where it is, what it is, why it is in the system
-picture of clean architecture
-RULE: only the layer that can see itself</description>
     </item>
     
     <item>
@@ -115,15 +81,6 @@ Hiểu rõ về thuật toán Neural Networks (Deep Learning) Tìm hiểu sơ l�
       <guid>https://AndrewNgo-ini.github.io/posts/math/basic_algebra/</guid>
       <description>I. Vector What is a vector Linear combination Basis vector Span Linear independent What is a vector A vector with its coordinates can be understood as a guide on how to go from the origin (O) to its tail.
 Basis vector (vector cơ sở) In the XY coordinate system, a vector pointing to the right with a length of 1 is called i-hat or the unit vector of the X-axis. Similarly, the vector pointing upwards with a length of 1 is called j-hat or the unit vector of the Y-axis.</description>
-    </item>
-    
-    <item>
-      <title>Tips for prod</title>
-      <link>https://AndrewNgo-ini.github.io/posts/productive_tips/server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://AndrewNgo-ini.github.io/posts/productive_tips/server/</guid>
-      <description>TOC Tmux gg Dg -&amp;gt; delete all docker </description>
     </item>
     
   </channel>
