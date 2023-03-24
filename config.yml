@@ -2,7 +2,7 @@ baseURL: https://AndrewNgo-ini.github.io
 languageCode: en-us
 title: let him cook
 theme: "PaperMod"
-publishDir: "docs"
+publishDir: "public"
 
 params:
     homeInfoParams:
