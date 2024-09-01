@@ -61,5 +61,5 @@ menu:
         #   weight: 20
         
 
-taxonomies:
-  tag: tags
+# taxonomies:
+#   tag: tags
