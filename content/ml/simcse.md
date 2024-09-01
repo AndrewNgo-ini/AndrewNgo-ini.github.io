@@ -4,7 +4,7 @@ date: 2023-03-22T15:15:16+07:00
 tags:
   - "tech"
   - "learn"
-draft: false
+draft: true
 cover:
     image: "/simcse.png"
     # can also paste direct link from external site

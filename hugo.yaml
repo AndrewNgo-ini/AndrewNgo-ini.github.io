@@ -1,16 +1,16 @@
 baseURL: https://AndrewNgo-ini.github.io
 languageCode: en-us
-title: let him cook
-theme: "PaperMod"
+title: hiieu
+theme: ["PaperMod"]
 publishDir: "public"
 
 params:
-    # homeInfoParams:
-    #     Title: "Hi there \U0001F44B"
-    #     Content: So, I had this crazy idea the other day. I was like, "what if I turn my brain into a freaking hash-table?" Like, seriously, picture it. My brain is now this super cool, tech-savvy tool that can store all the concepts I want to remember as keys, and the blog posts I wrote as the corresponding values. How awesome is that?! Now, whenever I need to revisit something I learned, I can just access my brain-hash and voila! It's like having a personal search engine in my head. So, if you're curious to see how it all works, check out my blog and let me know what you think! - written by ChatGPT
+    homeInfoParams:
+        Title: "Hi there \U0001F44B"
+        Content: "Welcome to my blog!"
 
     profileMode:
-        enabled: true
+        enabled: false
         title: "Hi there \U0001F44B"
         subtitle: So, I had this crazy idea the other day. I was like, "what if I turn my brain into a freaking hash-table?" Like, seriously, picture it. My brain is now this super cool, tech-savvy tool that can store all the concepts I want to remember as keys, and the blog posts I wrote as the corresponding values. How awesome is that?! Now, whenever I need to revisit something I learned, I can just access my brain-hash and voila! It's like having a personal search engine in my head. So, if you're curious to see how it all works, check out my blog and let me know what you think! - written by ChatGPT
         imageUrl: "/ava.png" # optional
@@ -35,18 +35,31 @@ params:
 
 menu:
     main:
-        - identifier: ml
-          name: Machine Learning
-          url: /ml/
+        - identifier: posts
+          name: Posts
+          url: /posts
           weight: 10
-        - identifier: back-end
-          name: Back End
-          url: /back-end/
+        - identifier: publications
+          name: Publications
+          url: /publications
+          weight: 11
+        - identifier: talks
+          name: Talks
+          url: /talks
           weight: 20
-        # - identifier: example
-        #   name: example.org
-        #   url: https://example.org
-        #   weight: 30
+        - identifier: about
+          name: About
+          url: /about
+          weight: 30
+        # - identifier: ml
+        #   name: Machine Learning
+        #   url: /ml/
+        #   weight: 10
+        # - identifier: back-end
+        #   name: Back End
+        #   url: /back-end/
+        #   weight: 20
+        
 
 taxonomies:
   tag: tags

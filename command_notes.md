@@ -1,11 +1,21 @@
 # Install
-brew install hugo
+macos: brew install hugo
+linux: sudo snap install hugo
 
 # Commands
 hugo new site "name"
-hugo server #Start server
 hugo new posts/my-first-post.md
-hugo -D #build
+
+# Build
+hugo -D
+
+# Start server
+hugo server 
+
+# Notes:
+remember to clone submodule or else local won't be rendered
 
 https://adityatelange.github.io/hugo-PaperMod/ #sample website
 https://github.com/adityatelange/hugo-PaperMod/wiki #theme source code
+
+

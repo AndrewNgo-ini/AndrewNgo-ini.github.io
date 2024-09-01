@@ -4,7 +4,7 @@ date: 2023-03-28T15:15:16+07:00
 tags:
   - "tech"
   - "learn"
-draft: false
+draft: true
 cover:
     #image: "https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png"
     # can also paste direct link from external site
